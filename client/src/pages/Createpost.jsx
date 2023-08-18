@@ -27,7 +27,7 @@ const Createpost = () => {
         setLoading(true)
            
            
-            await axios.post("http://localhost:3000/api/v1/posts",{
+            await axios.post("https://dalle-ai-y5bg.onrender.com/api/v1/posts",{
             name:form.name,
             prompt:form.prompt,
             image:form.image
@@ -66,7 +66,7 @@ const Createpost = () => {
     if (form.prompt) {
       try {
         setGeneratingImg(true);
-        const response = await fetch('http://localhost:3000/api/v1/dalle/generate', {
+        const response = await fetch('https://dalle-ai-y5bg.onrender.com/api/v1/dalle/generate', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

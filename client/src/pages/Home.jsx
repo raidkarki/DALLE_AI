@@ -20,7 +20,7 @@ const Home = () => {
     const getposts =async()=>{
 
         setLoading(true)
-        const res = await axios.get('http://localhost:3000/api/v1/posts')
+        const res = await axios.get('https://dalle-ai-y5bg.onrender.com/api/v1/posts')
         console.log(res.data.posts);
         
         setAllPosts(res.data.posts)
